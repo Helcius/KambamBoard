@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KambBoard</title>
+</head>
+<style>
+  
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .col-stl {
+        background-color: aliceblue;
+        border-right: 5px double blue;
+        border-left: 5px double blue;
+        margin: 10px;
+        padding: 10px 60px 100px 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titleCol {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    #templateTask {
+        border: 1px solid black;
+        cursor: move;
+        user-select: none;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #templatePreTask {
+        display: none;
+        border: 1px solid black;
+        cursor: move;
+        user-select: none;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #tituloTask {
+        text-align: center;
+        margin-right: 30px;
+        font-size: 22px;
+        font-weight: bold;
+        width: 200px;
+        margin-top: 30px;
+        margin-left:10px;
+    }
+
+    .titlePlusButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    button {
+        height: 50px;
+        width: 60px;
+    }
+    #addNewTaskDiv {
+        align-self: center;
+    }
+
+    
+
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="col-1 col-stl droppable">
+            <div class="titleCol">To do</div>
+
+            <div id="templatePreTask">
+
+                <input id="tituloPreTask" type="text" placeholder="Insira o titulo da Task">
+                <input id="conteudoPreTask" type="text" placeholder="Insira o conteúdo da Task">
+                <div>
+                    <button id="addTask">Add</button>
+                    <button id="delPreTask">Del</button>
+                </div>
+
+            </div>
+            <div id="col1">
+            <div id="templateTask" class="draggable">
+                <div class="titlePlusButton">
+                    <p id="tituloTask">exemplo task titulo</p>
+                    <div>
+                        <button>Edit</button>
+                        <button>Del</button>
+                    </div>
+                </div>
+                <p id="conteudoTask"> exemplo task descrição</p>
+            </div>
+            
+            </div>
+
+            <div id="addNewTaskDiv">
+                <button id="addNewTask">New</button>
+            </div>
+
+
+
+        </div>
+        <div class="col-2 col-stl droppable">
+            <div class="titleCol">In Progress</div>
+            <div id="templateTask"  class="draggable">
+                <div class="titlePlusButton">
+                    <p id="tituloTask">exemplo task titulo</p>
+                    <div>
+                        <button>Edit</button>
+                        <button>Del</button>
+                    </div>
+                </div>
+                <p id="conteudoTask">exemplo task descrição</p>
+            </div>
+        </div>
+
+        <div class="col-3 col-stl droppable">
+            <div class="titleCol">Done</div>
+            <div id="templateTask"  class="draggable">
+                <div class="titlePlusButton">
+                    <p id="tituloTask">exemplo task titulo</p>
+                    <div>
+                        <button>Edit</button>
+                        <button>Del</button>
+                    </div>
+                </div>
+                <p id="conteudoTask">exemplo task descrição</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="ProjKamb.js"></script>
+</body>
+
+</html>
